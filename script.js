@@ -51,7 +51,8 @@ function downloadCertificates() {
 
     html2pdf().set({ 
         filename: 'certificates.pdf',
-        orientation: 'landscape' // Set orientation to landscape
+        orientation: 'landscape', // Set orientation to landscape
+        html2canvas: { scale: 2 } // Increase scale for better resolution
     }).from(htmlContent).save();
 }
 
