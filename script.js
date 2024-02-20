@@ -49,13 +49,21 @@ function downloadCertificates() {
     const certificates = document.querySelectorAll('.certificate');
     const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
 
-    html2pdf().set({ 
+    // Set HTML2PDF options
+    const pdfOptions = {
         filename: 'certificates.pdf',
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
-        html2canvas: { scale: 5 }, // Increase scale for better resolution
-        jsPDF: { orientation: 'landscape' } // Set PDF orientation to landscape
-    }).from(htmlContent).save();
+        html2canvas: { scale: 2 }, // Increase scale for better resolution
+        jsPDF: { 
+            orientation: 'landscape', // Set PDF orientation to landscape
+            format: 'a4', // Set PDF format to A4
+        } 
+    };
+
+    // Generate and save the PDF
+    html2pdf().set(pdfOptions).from(htmlContent).save();
 }
+
 
 
 // Function to format date
