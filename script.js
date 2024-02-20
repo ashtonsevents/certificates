@@ -49,16 +49,32 @@ function downloadCertificates() {
     const certificates = document.querySelectorAll('.certificate');
     const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
 
-    // Set HTML2PDF options
+    // Get the dimensions of the content
+    const contentWidth = document.querySelector('.certificate-container').offsetWidth;
+    const contentHeight = document.querySelector('.certificate-container').offsetHeight;
+
+    // Set PDF options
     const pdfOptions = {
         filename: 'certificates.pdf',
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
         html2canvas: { scale: 2 }, // Increase scale for better resolution
         jsPDF: { 
             orientation: 'landscape', // Set PDF orientation to landscape
+            unit: 'mm', // Set unit to millimeters
             format: 'a4', // Set PDF format to A4
         } 
     };
+
+    // Calculate scale to fit content onto A4 page
+    const scale = Math.min(297 / contentWidth, 210 / contentHeight);
+
+    // Set the scale option
+    pdfOptions.jsPDF.scale = scale;
+
+    // Generate and save the PDF
+    html2pdf().set(pdfOptions).from(htmlContent).save();
+}
+
 
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
