@@ -75,13 +75,6 @@ function downloadCertificates() {
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
 
-
-    // Generate and save the PDF
-    html2pdf().set(pdfOptions).from(htmlContent).save();
-
-
-
-
 // Function to format date
 function formatDate(date) {
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
