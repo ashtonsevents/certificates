@@ -1,6 +1,6 @@
 // Define signature image filenames for each pharmacist
 const pharmacistSignatures = {
-    pharmacist1: 'Selwynjohn.png',
+    pharmacist1: 'SelwynJohn.png',
     pharmacist2: 'signature2.jpg',
     // Add more signatures for other pharmacists as needed
 };
