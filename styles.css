@@ -1,4 +1,4 @@
-.container {
+serif.container {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
@@ -143,8 +143,12 @@ label {
 }
 
 .ashtonslogo img {
-    height: 30px;
     float: right;
     margin: 0px;
+    max-width: 150px;
 }
 
+img {
+    width: 297mm;
+    height: auto;
+}
