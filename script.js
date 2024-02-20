@@ -78,7 +78,7 @@ function downloadCertificates() {
 
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
-}
+
 
 
 
