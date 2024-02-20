@@ -1,6 +1,6 @@
 // Define signature image filenames for each pharmacist
 const pharmacistSignatures = {
-    pharmacist1: 'SelwynJohn.png',
+    pharmacist1: 'Selwynjohn.png',
     pharmacist2: 'signature2.jpg',
     // Add more signatures for other pharmacists as needed
 };
@@ -49,44 +49,13 @@ function downloadCertificates() {
     const certificates = document.querySelectorAll('.certificate');
     const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
 
-    // Get the dimensions of the content
-    const contentWidth = document.querySelector('.certificate-container').offsetWidth;
-    const contentHeight = document.querySelector('.certificate-container').offsetHeight;
-
-    // Get the dimensions of the PDF paper size (A4 size)
-    const pdfPageSize = { width: 210, height: 297 }; // in mm (A4 size: 210x297 mm)
-
-    // Calculate the scale factor
-    const scaleX = pdfPageSize.width / contentWidth;
-    const scaleY = pdfPageSize.height / contentHeight;
-    const scale = Math.min(scaleX, scaleY);
-
-    // Set HTML2PDF options
-    const pdfOptions = {
+    html2pdf().set({ 
         filename: 'certificates.pdf',
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
-        html2canvas: { scale: 2 }, // Increase scale for better resolution
-        jsPDF: { 
-            orientation: 'landscape', // Set PDF orientation to landscape
-            format: 'a4', // Set PDF format to A4
-            unit: 'mm', // Set unit to millimeters
-            scale: scale // Set scale factor to fit content onto the page
-        } 
-    };
-
-    // Generate and save the PDF
-    try {
-        html2pdf().set(pdfOptions).from(htmlContent).save();
-    } catch (error) {
-        console.error('Error generating PDF:', error);
-        alert('An error occurred while generating the PDF. Please try again.');
-    }
+        html2canvas: { scale: 5 }, // Increase scale for better resolution
+        jsPDF: { orientation: 'landscape' } // Set PDF orientation to landscape
+    }).from(htmlContent).save();
 }
-
-
-    // Generate and save the PDF
-    html2pdf().set(pdfOptions).from(htmlContent).save();
-
 
 
 // Function to format date
