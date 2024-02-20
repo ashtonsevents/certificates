@@ -49,13 +49,35 @@ function downloadCertificates() {
     const certificates = document.querySelectorAll('.certificate');
     const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
 
-    html2pdf().set({ 
+    // Get the dimensions of the content
+    const contentWidth = document.querySelector('.certificate-container').offsetWidth;
+    const contentHeight = document.querySelector('.certificate-container').offsetHeight;
+
+    // Get the dimensions of the PDF paper size (A4 size)
+    const pdfPageSize = { width: 210, height: 297 }; // in mm (A4 size: 210x297 mm)
+
+    // Calculate the scale factor
+    const scaleX = pdfPageSize.width / contentWidth;
+    const scaleY = pdfPageSize.height / contentHeight;
+    const scale = Math.min(scaleX, scaleY);
+
+    // Set HTML2PDF options
+    const pdfOptions = {
         filename: 'certificates.pdf',
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
-        html2canvas: { scale: 5 }, // Increase scale for better resolution
-        jsPDF: { orientation: 'landscape' } // Set PDF orientation to landscape
-    }).from(htmlContent).save();
+        html2canvas: { scale: 20 }, // Increase scale for better resolution
+        jsPDF: { 
+            orientation: 'landscape', // Set PDF orientation to landscape
+            format: 'a4', // Set PDF format to A4
+            unit: 'mm', // Set unit to millimeters
+            scale: scale // Set scale factor to fit content onto the page
+        } 
+    };
+
+    // Generate and save the PDF
+    html2pdf().set(pdfOptions).from(htmlContent).save();
 }
+
 
 
 // Function to format date
