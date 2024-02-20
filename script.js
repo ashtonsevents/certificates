@@ -50,6 +50,7 @@ function downloadCertificates() {
     const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
 
     html2pdf().set({ 
+        filename: 'certificates.pdf',
         orientation: 'landscape' // Set orientation to landscape
     }).from(htmlContent).save();
 }
