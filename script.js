@@ -51,10 +51,12 @@ function downloadCertificates() {
 
     html2pdf().set({ 
         filename: 'certificates.pdf',
-        orientation: 'landscape', // Set orientation to landscape
-        html2canvas: { scale: 2 } // Increase scale for better resolution
+        pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
+        html2canvas: { scale: 2 }, // Increase scale for better resolution
+        jsPDF: { orientation: 'landscape' } // Set PDF orientation to landscape
     }).from(htmlContent).save();
 }
+
 
 // Function to format date
 function formatDate(date) {
