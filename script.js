@@ -49,7 +49,9 @@ function downloadCertificates() {
     const certificates = document.querySelectorAll('.certificate');
     const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
 
-    html2pdf().set({ orientation: 'landscape' }).from(htmlContent).save();
+    html2pdf().set({ 
+        orientation: 'landscape' // Set orientation to landscape
+    }).from(htmlContent).save();
 }
 
 // Function to format date
