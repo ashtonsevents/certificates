@@ -52,7 +52,7 @@ function downloadCertificates() {
     html2pdf().set({ 
         filename: 'certificates.pdf',
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
-        html2canvas: { scale: 2 }, // Increase scale for better resolution
+        html2canvas: { scale: 5 }, // Increase scale for better resolution
         jsPDF: { orientation: 'landscape' } // Set PDF orientation to landscape
     }).from(htmlContent).save();
 }
