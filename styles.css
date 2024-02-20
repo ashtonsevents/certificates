@@ -140,6 +140,7 @@ label {
 }
 
 .ashtonslogo img {
-    height: 20px;
-    text-align: center;
+    height: 30px;
+    float: right;
+    margin: 0px;
 }
