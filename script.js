@@ -21,37 +21,45 @@ function generateCertificates() {
 
     names.forEach(name => {
         const signatureImage = pharmacistSignatures[pharmacist]; // Get signature image filename for selected pharmacist
-
+    
         const certificateHTML = `
-            <div class="certificate">
-                <div class="certificate-content">
-                    <img src="images/${certificateImage}" alt="Certificate Template">
-                    <div class="text-overlay">
-                        <img src="signatures/${signatureImage}" alt="Pharmacist Signature">
-                        <h2>Certificate Template: ${certificateTemplate}</h2>
-                        <p>Pharmacist: ${pharmacist}</p>
-                        <p>Date: ${date}</p>
-                        <p>Name: ${name}</p>
-                    </div>
-                </div>
+        <div class="certificate">
+        <div class="certificate-content">
+            <img src="images/${certificateImage}" alt="Certificate Template">
+            <div class="text-overlay">
+                <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
+                <p class="date1">${date}</p>
+                <p class="name">${name}</p>
+                <p class="date2">${date}</p>
             </div>
+        </div>
+        <button class="downloadCertificate"><img src="download.png" alt="Download Icon"></button>
+    </div>
+    
         `;
         certificateContainer.innerHTML += certificateHTML;
     });
+    
 
-    // After generating certificates, enable the download button and attach event listener
+    // After generating certificates, enable the download buttons and attach event listeners
+    const downloadButtons = document.querySelectorAll('.downloadCertificate');
+    downloadButtons.forEach((button, index) => {
+        button.addEventListener("click", () => downloadCertificate(index));
+    });
+
+    // Enable the download all certificates button
     document.getElementById("downloadAll").disabled = false;
-    document.getElementById("downloadAll").addEventListener("click", downloadCertificates);
 }
 
-// Function to download certificates as PDF
-function downloadCertificates() {
+// Function to download individual certificate as PDF
+function downloadCertificate(index) {
     const certificates = document.querySelectorAll('.certificate');
-    const htmlContent = Array.from(certificates).map(certificate => certificate.innerHTML).join('');
+    const certificate = certificates[index];
+    const htmlContent = certificate.innerHTML;
 
     // Set PDF options
     const pdfOptions = {
-        filename: 'certificates.pdf',
+        filename: `certificate_${index + 1}.pdf`,
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
         html2canvas: { scale: 5 }, // Increase scale for better resolution
         jsPDF: { 
@@ -62,8 +70,8 @@ function downloadCertificates() {
     };
 
     // Calculate the scale to fit content onto the A4 page
-    const contentWidth = document.querySelector('.certificate-container').offsetWidth;
-    const contentHeight = document.querySelector('.certificate-container').offsetHeight;
+    const contentWidth = certificate.offsetWidth;
+    const contentHeight = certificate.offsetHeight;
     const scale = Math.min(297 / contentWidth, 210 / contentHeight);
 
     // Set the scale option
@@ -72,6 +80,14 @@ function downloadCertificates() {
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
+
+// Function to download all certificates as PDF
+document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
+function downloadAllCertificates() {
+    // Generate and save the PDF
+    html2pdf().from(document.getElementById("certificateContainer")).save();
+}
+
 
 
 // Function to format date
