@@ -78,15 +78,16 @@ button:hover {
     right: 10px;
   }
   
-
+/*
   .text-overlay img {
     margin-bottom: 10px;
     width: fit-content;
     height: 50px;
     position: relative;
-    top: 430px; /* Adjust as needed */
-    left: 600px; /* Adjust as needed */
-  }
+    top: 430px; 
+    left: 600px; 
+  } 
+  */
 
 .text-overlay h2,
 .text-overlay p {
@@ -227,4 +228,89 @@ img.signature1 {
     /* Add hover styles for the image */
     /* For example, change image color */
     filter: brightness(0.6); /* Adjust as needed */
+}
+
+/* CERTIFICATE DETAILS */
+
+/* Add styles for the name on Anaphylaxis certificate */
+.name-anaphylaxis {
+    position: relative;
+    left: 233px;
+    top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Add styles for the date1 on Anaphylaxis certificate */
+.date1-anaphylaxis {
+    position: relative;
+    left: 814px;
+    top: 441px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+/* Add styles for the date2 on Anaphylaxis certificate */
+.date2-anaphylaxis {
+    position: relative;
+    left: 775px;
+    bottom: 128px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+
+.signature1-anaphylaxis {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 790px;
+    top: 560px;
+}
+
+/*============================================*/
+
+.date1-asthma {
+    position: relative;
+    left: 814px;
+    top: 430px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-asthma {
+    position: relative;
+    left: 775px;
+    bottom: 159px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+
+.signature1-asthma {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 790px;
+    top: 535px;
+}
+
+.name-asthma {
+    position: relative;
+    left: 233px;
+    top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
 }

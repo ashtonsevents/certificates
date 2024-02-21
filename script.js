@@ -1,7 +1,27 @@
 // Define signature image filenames for each pharmacist
 const pharmacistSignatures = {
-    pharmacist1: 'SelwynJohn.png',
-    pharmacist2: 'signature2.jpg',
+    pharmacist1: 'Aarti Kundalia.png',
+    pharmacist2: 'Ali Ameen.png',
+    pharmacist3: 'Andrea McGlade.png',
+    pharmacist4: 'Aysha Hoque.png',
+    pharmacist5: 'Bill Carcary.png',
+    pharmacist6: 'Carol fletcher.png',
+    pharmacist7: 'charlotte stranks.png',
+    pharmacist8: 'Chun Ting Lam.png',
+    pharmacist9: 'Cisca Van der Lith.png',
+    pharmacist10: 'Claire Whitehead.png',
+    pharmacist11: 'Dalia Isaacson.png',
+    pharmacist12: 'Dina Santos.png',
+    pharmacist13: 'Edman Lo.png',
+    pharmacist14: '.png',
+    pharmacist15: '.png',
+    pharmacist16: '.png',
+    pharmacist17: '.png',
+    pharmacist18: '.png',
+    pharmacist19: '.png',
+    pharmacist20: '.png',
+    pharmacist21: '.png',
+    pharmacist22: '.png',
     // Add more signatures for other pharmacists as needed
 };
 
@@ -20,30 +40,49 @@ function generateCertificates() {
     certificateContainer.innerHTML = ""; // Clear previous certificates
 
     names.forEach((name, index) => {
+        const certificateOption = document.getElementById("certificate").value; // Get the selected certificate option
+        const certificateId = `certificate_${index + 1}`;
         const signatureImage = pharmacistSignatures[pharmacist]; // Get signature image filename for selected pharmacist
-        const certificateName = document.getElementById("certificate").selectedOptions[0].text; // Get the name of the selected certificate
 
-        const certificateHTML = `
-            <div class="certificate">
+        // Generate HTML for each certificate with a unique identifier
+        let certificateHTML = `
+            <div class="certificate" id="${certificateId}">
                 <div class="certificate-content">
                     <img src="images/${certificateImage}" alt="Certificate Template">
                     <div class="text-overlay">
                         <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
                         <p class="date1">${date}</p>
-                        <p class="name">${name}</p>
+                        <p class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
                         <p class="date2">${date}</p>
                     </div>
                 </div>
-                <button class="downloadCertificate"><img src="download.png" alt="Download Icon"></button>
+                <button class="downloadCertificate" onclick="downloadCertificate('${certificateId}')"><img src="download.png" alt="Download Icon"></button>
             </div>
         `;
+
+        // Adjust position of p elements for Anaphylaxis certificate
+        if (certificateTemplate === 'certificate2') {
+            certificateHTML = certificateHTML.replace('class="name', 'class="name-anaphylaxis');
+            certificateHTML = certificateHTML.replace('class="date1', 'class="date1-anaphylaxis');
+            certificateHTML = certificateHTML.replace('class="date2', 'class="date2-anaphylaxis');
+            certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-anaphylaxis');
+        }
+
+        if (certificateTemplate === 'certificate3') {
+            certificateHTML = certificateHTML.replace('class="name', 'class="name-asthma');
+            certificateHTML = certificateHTML.replace('class="date1', 'class="date1-asthma');
+            certificateHTML = certificateHTML.replace('class="date2', 'class="date2-asthma');
+            certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-asthma');
+        }
+
+
         certificateContainer.innerHTML += certificateHTML;
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
     const downloadButtons = document.querySelectorAll('.downloadCertificate');
     downloadButtons.forEach((button, index) => {
-        button.addEventListener("click", () => downloadCertificate(index, names[index], certificateName, date));
+        button.addEventListener("click", () => downloadCertificate(index));
     });
 
     // Enable the download all certificates button
@@ -51,24 +90,32 @@ function generateCertificates() {
 }
 
 // Function to download individual certificate as PDF
-function downloadCertificate(index) {
-    const certificates = document.querySelectorAll('.certificate');
-    const certificate = certificates[index];
-    const nameElement = certificate.querySelector('.name');
-    const certificateName = document.getElementById("certificate").selectedOptions[0].text;
-    const date = new Date(document.getElementById("date").value).toLocaleDateString('en-GB');
+function downloadCertificate(certificateId) {
+    const certificate = document.getElementById(certificateId);
+    const htmlContent = certificate.innerHTML;
 
     const pdfOptions = {
-        filename: `${nameElement.textContent.trim()}_${certificateName}_${date}.pdf`,
-        // Add other PDF options as needed
+        filename: `${certificateId}.pdf`,
+        pagebreak: { mode: 'avoid-all' },
+        html2canvas: { scale: 5 },
+        jsPDF: { 
+            orientation: 'landscape',
+            unit: 'mm',
+            format: 'a4',
+        } 
     };
 
-    const htmlContent = certificate.innerHTML;
+    // Calculate the scale to fit content onto the A4 page
+    const contentWidth = certificate.offsetWidth;
+    const contentHeight = certificate.offsetHeight;
+    const scale = Math.min(297 / contentWidth, 210 / contentHeight);
+
+    // Set the scale option
+    pdfOptions.jsPDF.scale = scale;
 
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
-
 
 // Function to download all certificates as PDF
 document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
