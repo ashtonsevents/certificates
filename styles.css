@@ -1,0 +1,230 @@
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #25bcb9;
+    border-radius: 5px;
+    background-color: #0a485b;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+select,
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #25bcb9; /* Change border property */
+    border-radius: 5px;
+    background-color: #25bcb927;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #25bcb9;
+}
+
+.certificate {
+    width: 200mm; /* Adjust width to fit within A4 size */
+    height: 287mm; /* Adjust height to fit within A4 size */
+    margin-bottom: 20px;
+}
+
+
+.certificate-content {
+  position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  .name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+
+  .text-overlay img {
+    margin-bottom: 10px;
+    width: fit-content;
+    height: 50px;
+    position: relative;
+    top: 430px; /* Adjust as needed */
+    left: 600px; /* Adjust as needed */
+  }
+
+.text-overlay h2,
+.text-overlay p {
+  margin: 5px;
+}
+
+p {
+    margin: 10px;
+}
+
+h1 {
+    margin: 0;
+}
+
+body {
+    background-color: #0a2930;
+}
+
+input[type="date"] {
+    width: calc(100% - 16px); /* Adjust according to your padding */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+textarea {
+    width: calc(100% - 16px); /* Adjust according to your padding */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor:auto;
+}
+
+select {
+    cursor: pointer;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.ashtonslogo img {
+    float: right;
+    margin: 0px;
+    max-width: 150px;
+}
+
+img {
+    width: 297mm;
+    height: auto;
+}
+
+.date2 {
+    position: relative;
+    left: 775px;
+    bottom: 109px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+img.signature1 {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 790px;
+    top: 580px;
+
+}
+
+.date1 {
+    position: relative;
+    left: 814px;
+    top: 539px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.name {
+    position: relative;
+    left: 233px;
+    top: 94px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Add styles for the certificate wrapper */
+.certificate-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Add styles for the download button */
+.certificate {
+    position: relative;
+}
+
+.downloadCertificate {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.downloadCertificate img {
+    width: 30px; /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
+    left: 390px;
+    position: absolute;
+    top: 208px;
+}
+
+.downloadCertificate:hover img {
+    /* Add hover styles for the image */
+    /* For example, change image color */
+    filter: brightness(0.6); /* Adjust as needed */
+}
