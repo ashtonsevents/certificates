@@ -19,32 +19,31 @@ function generateCertificates() {
     const certificateContainer = document.getElementById("certificateContainer");
     certificateContainer.innerHTML = ""; // Clear previous certificates
 
-    names.forEach(name => {
+    names.forEach((name, index) => {
         const signatureImage = pharmacistSignatures[pharmacist]; // Get signature image filename for selected pharmacist
-    
+        const certificateName = document.getElementById("certificate").selectedOptions[0].text; // Get the name of the selected certificate
+
         const certificateHTML = `
-        <div class="certificate">
-        <div class="certificate-content">
-            <img src="images/${certificateImage}" alt="Certificate Template">
-            <div class="text-overlay">
-                <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
-                <p class="date1">${date}</p>
-                <p class="name">${name}</p>
-                <p class="date2">${date}</p>
+            <div class="certificate">
+                <div class="certificate-content">
+                    <img src="images/${certificateImage}" alt="Certificate Template">
+                    <div class="text-overlay">
+                        <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
+                        <p class="date1">${date}</p>
+                        <p class="name">${name}</p>
+                        <p class="date2">${date}</p>
+                    </div>
+                </div>
+                <button class="downloadCertificate"><img src="download.png" alt="Download Icon"></button>
             </div>
-        </div>
-        <button class="downloadCertificate"><img src="download.png" alt="Download Icon"></button>
-    </div>
-    
         `;
         certificateContainer.innerHTML += certificateHTML;
     });
-    
 
     // After generating certificates, enable the download buttons and attach event listeners
     const downloadButtons = document.querySelectorAll('.downloadCertificate');
     downloadButtons.forEach((button, index) => {
-        button.addEventListener("click", () => downloadCertificate(index));
+        button.addEventListener("click", () => downloadCertificate(index, names[index], certificateName, date));
     });
 
     // Enable the download all certificates button
@@ -52,14 +51,14 @@ function generateCertificates() {
 }
 
 // Function to download individual certificate as PDF
-function downloadCertificate(index) {
+function downloadCertificate(index, name, certificateName, date) {
     const certificates = document.querySelectorAll('.certificate');
     const certificate = certificates[index];
     const htmlContent = certificate.innerHTML;
 
     // Set PDF options
     const pdfOptions = {
-        filename: `certificate_${index + 1}.pdf`,
+        filename: `${name}_${certificateName}_${date}.pdf`, // Construct the filename
         pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
         html2canvas: { scale: 5 }, // Increase scale for better resolution
         jsPDF: { 
@@ -87,8 +86,6 @@ function downloadAllCertificates() {
     // Generate and save the PDF
     html2pdf().from(document.getElementById("certificateContainer")).save();
 }
-
-
 
 // Function to format date
 function formatDate(date) {
