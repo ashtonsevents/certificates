@@ -51,34 +51,24 @@ function generateCertificates() {
 }
 
 // Function to download individual certificate as PDF
-function downloadCertificate(index, name, certificateName, date) {
+function downloadCertificate(index) {
     const certificates = document.querySelectorAll('.certificate');
     const certificate = certificates[index];
-    const htmlContent = certificate.innerHTML;
+    const nameElement = certificate.querySelector('.name');
+    const certificateName = document.getElementById("certificate").selectedOptions[0].text;
+    const date = new Date(document.getElementById("date").value).toLocaleDateString('en-GB');
 
-    // Set PDF options
     const pdfOptions = {
-        filename: `${name}_${certificateName}_${date}.pdf`, // Construct the filename
-        pagebreak: { mode: 'avoid-all' }, // Avoid page breaks
-        html2canvas: { scale: 5 }, // Increase scale for better resolution
-        jsPDF: { 
-            orientation: 'landscape', // Set PDF orientation to landscape
-            unit: 'mm', // Set unit to millimeters
-            format: 'a4', // Set PDF format to A4
-        } 
+        filename: `${nameElement.textContent.trim()}_${certificateName}_${date}.pdf`,
+        // Add other PDF options as needed
     };
 
-    // Calculate the scale to fit content onto the A4 page
-    const contentWidth = certificate.offsetWidth;
-    const contentHeight = certificate.offsetHeight;
-    const scale = Math.min(297 / contentWidth, 210 / contentHeight);
-
-    // Set the scale option
-    pdfOptions.jsPDF.scale = scale;
+    const htmlContent = certificate.innerHTML;
 
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
+
 
 // Function to download all certificates as PDF
 document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
