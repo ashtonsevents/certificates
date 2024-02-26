@@ -376,7 +376,7 @@ function downloadCertificate(certificateId) {
     const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
 
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateIndex]} ${certificateImage} ${Date}.pdf`;
+    const filename = `${names[certificateIndex]} ${certificateTemplate} ${Date}.pdf`;
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
