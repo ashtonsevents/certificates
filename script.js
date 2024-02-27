@@ -373,8 +373,8 @@ function downloadCertificate(certificateId) {
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateId]} ${certificate} ${formattedDate}.pdf`;
-    
+    const filename = `${names[certificateId]} ${certificate} ${formatDate}.pdf`;
+
     const pdfOptions = {
         filename: filename, // Use the constructed filename
         pagebreak: { mode: 'avoid-all' },
