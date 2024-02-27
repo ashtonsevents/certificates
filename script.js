@@ -359,7 +359,7 @@ let certificateHTML = `
 }
 
 function downloadCertificate(certificateId) {
-    const certificate = document.getElementById(certificateId);
+    const certificate = document.getElementById(`certificate_${certificateId}`);
     const htmlContent = certificate.innerHTML;
 
     // Retrieve selected options and name input value
