@@ -374,8 +374,11 @@ function downloadCertificate(certificateId) {
     const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
+    // Get the index of the certificate being processed
+    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
+
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateId]}_${certificateTemplate}_${formattedDate}.pdf`;
+    const filename = `${names[certificateIndex]}_${certificateTemplate}_${formattedDate}.pdf`;
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
