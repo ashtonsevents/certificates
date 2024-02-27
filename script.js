@@ -77,17 +77,20 @@ function generateCertificates() {
         const signatureImage = pharmacistSignatures[pharmacist]; // Get signature image filename for selected pharmacist
 
         // Generate HTML for each certificate with a unique identifier
-let certificateHTML = `
-    <div class="certificate" id="${certificateId}">
-        <div class="certificate-content">
-            <!-- Other content -->
-            <p class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
-            <!-- Other content -->
-        </div>
-        <button class="downloadCertificate" onclick="downloadCertificate('${name}', '${certificateId}')"><img src="download.png" alt="Download Icon"></button>
-    </div>
-`;
-
+        let certificateHTML = `
+            <div class="certificate" id="${certificateId}">
+                <div class="certificate-content">
+                    <img src="images/${certificateImage}" alt="Certificate Template">
+                    <div class="text-overlay">
+                        <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
+                        <p class="date1">${date}</p>
+                        <p class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
+                        <p class="date2">${date}</p>
+                    </div>
+                </div>
+                <button class="downloadCertificate" onclick="downloadCertificate('${certificateId}')"><img src="download.png" alt="Download Icon"></button>
+            </div>
+        `;
 
         // Adjust position of p elements for Anaphylaxis certificate
         if (certificateTemplate === 'certificate2') {
@@ -359,7 +362,7 @@ let certificateHTML = `
 }
 
 function downloadCertificate(certificateId) {
-    const certificate = document.getElementById(`certificate_${certificateId}`);
+    const certificate = document.getElementById(certificateId);
     const htmlContent = certificate.innerHTML;
 
     // Retrieve selected options and name input value
@@ -370,7 +373,8 @@ function downloadCertificate(certificateId) {
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateId]} ${certificate} ${certificateTemplate} .pdf`;
+    const filename = `${names[certificateId]} ${certificateTemplate}.pdf`;
+
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
