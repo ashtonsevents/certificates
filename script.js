@@ -373,8 +373,7 @@ function downloadCertificate(certificateId) {
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateId]} ${certificateTemplate} ${formattedDate}.pdf`;
-
+    const filename = `${names[certificateId]}_${certificateTemplate}_${formattedDate}.pdf`;
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
@@ -398,7 +397,6 @@ function downloadCertificate(certificateId) {
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
-
 
 // Function to download all certificates as PDF
 document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
