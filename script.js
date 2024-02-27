@@ -369,6 +369,8 @@ function downloadCertificate(certificateId) {
     const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
     const pharmacist = document.getElementById("pharmacist").value;
     const names = document.getElementById("names").value.split(",").map(name => name.trim());
+    console.log(names); // Log the names array to debug
+
     const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
@@ -397,6 +399,7 @@ function downloadCertificate(certificateId) {
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
+
 
 // Function to download all certificates as PDF
 document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
