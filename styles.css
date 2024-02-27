@@ -235,6 +235,7 @@ img.signature1 {
 /* Add styles for the name on Anaphylaxis certificate */
 .name-anaphylaxis {
     position: relative;
+    left: 814px;
     top: -2px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
