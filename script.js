@@ -170,12 +170,6 @@ function generateCertificates() {
             certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-drug-interaction');
         }
         
-        if (certificateTemplate === 'certificate13') {
-            certificateHTML = certificateHTML.replace('class="name', 'class="name-e-works');
-            certificateHTML = certificateHTML.replace('class="date1', 'class="date1-e-works');
-            certificateHTML = certificateHTML.replace('class="date2', 'class="date2-e-works');
-            certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-e-works');
-        }
         
         if (certificateTemplate === 'certificate14') {
             certificateHTML = certificateHTML.replace('class="name', 'class="name-end-of-life-parkinsons');

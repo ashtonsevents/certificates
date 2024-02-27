@@ -320,7 +320,7 @@ img.signature1 {
 .date1-attention {
     position: relative;
     left: 814px;
-    top: 430px;
+    top: 464px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
@@ -329,7 +329,7 @@ img.signature1 {
 .date2-attention {
     position: relative;
     left: 775px;
-    bottom: 159px;
+    bottom: 116px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -339,16 +339,16 @@ img.signature1 {
 
 .signature1-attention {
     position: absolute;
-    width: 150px;
+    width: 130px;
     height: auto;
     left: 790px;
-    top: 535px;
+    top: 585px;
 }
 
 .name-attention {
     position: relative;
     left: 233px;
-    top: -2px;
+    top: 27px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
     font-size: 44pt;
@@ -399,19 +399,19 @@ img.signature1 {
 
 /*===========================================*/
 
-.date1-attention {
+.date1-clozapine {
     position: relative;
     left: 814px;
-    top: 430px;
+    top: 440px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
 }
 
-.date2-attention {
+.date2-clozapine {
     position: relative;
     left: 775px;
-    bottom: 159px;
+    bottom: 147px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -419,15 +419,15 @@ img.signature1 {
 }
 
 
-.signature1-attention {
+.signature1-clozapine {
     position: absolute;
-    width: 150px;
+    width: 130px;
     height: auto;
     left: 790px;
-    top: 535px;
+    top: 550px;
 }
 
-.name-attention {
+.name-clozapine {
     position: relative;
     left: 233px;
     top: -2px;
@@ -440,16 +440,98 @@ img.signature1 {
 
 /*===========================================*/
 
-.date1-attention {
+.date1-controlled-drugs-destruction {
     position: relative;
     left: 814px;
-    top: 430px;
+    top: 459px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
 }
 
-.date2-attention {
+.date2-controlled-drugs-destruction {
+    position: relative;
+    left: 775px;
+    bottom: 133px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+
+.signature1-controlled-drugs-destruction {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 564px;
+}
+
+.name-controlled-drugs-destruction {
+    position: relative;
+    left: 233px;
+    top: 16px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/*===========================================*/
+
+.date1-controlled-drugs-prisons {
+    position: relative;
+    left: 814px;
+    top: 459px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-controlled-drugs-prisons {
+    position: relative;
+    left: 775px;
+    bottom: 125px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+
+.signature1-controlled-drugs-prisons {
+    position: absolute;
+    width: 128px;
+    height: auto;
+    left: 790px;
+    top: 574px;
+}
+
+.name-controlled-drugs-prisons {
+    position: relative;
+    left: 233px;
+    top: 21px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/*===========================================*/
+
+.date1-controlled-drugs {
+    position: relative;
+    left: 814px;
+    top: 437px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-controlled-drugs {
     position: relative;
     left: 775px;
     bottom: 159px;
@@ -460,7 +542,7 @@ img.signature1 {
 }
 
 
-.signature1-attention {
+.signature1-controlled-drugs {
     position: absolute;
     width: 150px;
     height: auto;
@@ -468,7 +550,7 @@ img.signature1 {
     top: 535px;
 }
 
-.name-attention {
+.name-controlled-drugs {
     position: relative;
     left: 233px;
     top: -2px;
@@ -479,18 +561,17 @@ img.signature1 {
     color: #f16722;
 }
 
-/*===========================================*/
-
-.date1-attention {
+/* Certificate 10 */
+.date1-cyber-security {
     position: relative;
     left: 814px;
-    top: 430px;
+    top: 478px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
 }
 
-.date2-attention {
+.date2-cyber-security {
     position: relative;
     left: 775px;
     bottom: 159px;
@@ -500,8 +581,7 @@ img.signature1 {
     font-size: 12pt;
 }
 
-
-.signature1-attention {
+.signature1-cyber-security {
     position: absolute;
     width: 150px;
     height: auto;
@@ -509,7 +589,86 @@ img.signature1 {
     top: 535px;
 }
 
-.name-attention {
+.name-cyber-security {
+    position: relative;
+    left: 233px;
+    top: 39px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 11 */
+.date1-diabetes-mental-health {
+    position: relative;
+    left: 814px;
+    top: 457px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-diabetes-mental-health {
+    position: relative;
+    left: 775px;
+    bottom: 129px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-diabetes-mental-health {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 565px;
+}
+
+.name-diabetes-mental-health {
+    position: relative;
+    left: 233px;
+    top: 20px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 12 */
+.date1-drug-interaction {
+    position: relative;
+    left: 814px;
+    top: 430px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-drug-interaction {
+    position: relative;
+    left: 775px;
+    bottom: 159px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-drug-interaction {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    left: 790px;
+    top: 535px;
+}
+
+.name-drug-interaction {
     position: relative;
     left: 233px;
     top: -2px;
@@ -520,18 +679,497 @@ img.signature1 {
     color: #f16722;
 }
 
-/*===========================================*/
-
-.date1-attention {
+/* Continue this pattern for each certificate */
+/* Certificate 14 */
+.date1-end-of-life-parkinsons {
     position: relative;
     left: 814px;
-    top: 430px;
+    top: 456px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
 }
 
-.date2-attention {
+.date2-end-of-life-parkinsons {
+    position: relative;
+    left: 775px;
+    bottom: 113px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-end-of-life-parkinsons {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-end-of-life-parkinsons {
+    position: relative;
+    left: 233px;
+    top: 20px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 15 */
+.date1-epilepsy-mental-health {
+    position: relative;
+    left: 814px;
+    top: 450px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-epilepsy-mental-health {
+    position: relative;
+    left: 775px;
+    bottom: 116px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-epilepsy-mental-health {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 584px;
+}
+
+.name-epilepsy-mental-health {
+    position: relative;
+    left: 233px;
+    top: 12px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+
+/* Certificate 17 */
+.date1-gdpr {
+    position: relative;
+    left: 814px;
+    top: 532px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-gdpr {
+    position: relative;
+    left: 775px;
+    bottom: 111px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-gdpr {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-gdpr {
+    position: relative;
+    left: 233px;
+    top: 95px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 18 */
+.date1-good-distribution-practice {
+    position: relative;
+    left: 814px;
+    top: 530px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-good-distribution-practice {
+    position: relative;
+    left: 775px;
+    bottom: 112px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-good-distribution-practice {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 578px;
+}
+
+.name-good-distribution-practice {
+    position: relative;
+    left: 233px;
+    top: 88px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 19 */
+.date1-hca-medicines-administration {
+    position: relative;
+    left: 814px;
+    top: 457px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-hca-medicines-administration {
+    position: relative;
+    left: 756px;
+    bottom: 112px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-hca-medicines-administration {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-hca-medicines-administration {
+    position: relative;
+    left: 233px;
+    top: 18px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+
+/* Certificate 20 */
+.date1-high-dose-antipsychotic {
+    position: relative;
+    left: 814px;
+    top: 459px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-high-dose-antipsychotic {
+    position: relative;
+    left: 775px;
+    bottom: 113px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-high-dose-antipsychotic {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 800px;
+    top: 590px;
+}
+
+.name-high-dose-antipsychotic {
+    position: relative;
+    left: 233px;
+    top: 17px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 21 */
+.date1-induction-to-ashtons {
+    position: relative;
+    left: 814px;
+    top: 490px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-induction-to-ashtons {
+    position: relative;
+    left: 775px;
+    bottom: 158px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-induction-to-ashtons {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 539px;
+}
+
+.name-induction-to-ashtons {
+    position: relative;
+    left: 233px;
+    top: 50px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 22 */
+.date1-introduction-to-medication {
+    position: relative;
+    left: 814px;
+    top: 454px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-introduction-to-medication {
+    position: relative;
+    left: 775px;
+    bottom: 111px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-introduction-to-medication {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-introduction-to-medication {
+    position: relative;
+    left: 233px;
+    top: 16px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+
+
+/* Continue this pattern for each certificate */
+/* Certificate 24 */
+.date1-management-diabetes-end-of-life {
+    position: relative;
+    left: 814px;
+    top: 473px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-management-diabetes-end-of-life {
+    position: relative;
+    left: 775px;
+    bottom: 112px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-management-diabetes-end-of-life {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 587px;
+}
+
+.name-management-diabetes-end-of-life {
+    position: relative;
+    left: 233px;
+    top: 33px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 25 */
+.date1-managing-oral-problems-palliative-care {
+    position: relative;
+    left: 814px;
+    top: 468px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-managing-oral-problems-palliative-care {
+    position: relative;
+    left: 775px;
+    bottom: 112px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-managing-oral-problems-palliative-care {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-managing-oral-problems-palliative-care {
+    position: relative;
+    left: 233px;
+    top: 32px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 26 */
+.date1-medicine-management {
+    position: relative;
+    left: 814px;
+    top: 473px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-medicine-management {
+    position: relative;
+    left: 775px;
+    bottom: 113px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-medicine-management {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-medicine-management {
+    position: relative;
+    left: 233px;
+    top: 36px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 27 */
+.date1-medicines-mental-health-act {
+    position: relative;
+    left: 814px;
+    top: 475px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-medicines-mental-health-act {
+    position: relative;
+    left: 775px;
+    bottom: 114px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-medicines-mental-health-act {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-medicines-mental-health-act {
+    position: relative;
+    left: 233px;
+    top: 37px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 28 */
+.date1-patient-group-directions {
+    position: relative;
+    left: 814px;
+    top: 495px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-patient-group-directions {
     position: relative;
     left: 775px;
     bottom: 159px;
@@ -541,8 +1179,7 @@ img.signature1 {
     font-size: 12pt;
 }
 
-
-.signature1-attention {
+.signature1-patient-group-directions {
     position: absolute;
     width: 150px;
     height: auto;
@@ -550,10 +1187,444 @@ img.signature1 {
     top: 535px;
 }
 
-.name-attention {
+.name-patient-group-directions {
+    position: relative;
+    left: 233px;
+    top: 58px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 29 */
+.date1-pharmacist-recognition-award {
+    position: relative;
+    left: 814px;
+    top: 438px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-pharmacist-recognition-award {
+    position: relative;
+    left: 775px;
+    bottom: 124px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-pharmacist-recognition-award {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 575px;
+}
+
+.name-pharmacist-recognition-award {
     position: relative;
     left: 233px;
     top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 30 */
+.date1-pharmacological-interventions-detoxification {
+    position: relative;
+    left: 814px;
+    top: 498px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-pharmacological-interventions-detoxification {
+    position: relative;
+    left: 775px;
+    bottom: 111px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-pharmacological-interventions-detoxification {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-pharmacological-interventions-detoxification {
+    position: relative;
+    left: 233px;
+    top: 59px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 31 */
+.date1-pharmacy-induction {
+    position: relative;
+    left: 814px;
+    top: 495px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-pharmacy-induction {
+    position: relative;
+    left: 775px;
+    bottom: 158px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-pharmacy-induction {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 534px;
+}
+
+.name-pharmacy-induction {
+    position: relative;
+    left: 233px;
+    top: 56px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 32 */
+.date1-rapid-tranquillisation {
+    position: relative;
+    left: 814px;
+    top: 459px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-rapid-tranquillisation {
+    position: relative;
+    left: 775px;
+    bottom: 112px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-rapid-tranquillisation {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 589px;
+}
+
+.name-rapid-tranquillisation {
+    position: relative;
+    left: 233px;
+    top: 18px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 33 */
+.date1-safer-medicines-administration {
+    position: relative;
+    left: 814px;
+    top: 439px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-safer-medicines-administration {
+    position: relative;
+    left: 775px;
+    bottom: 114px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-safer-medicines-administration {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-safer-medicines-administration {
+    position: relative;
+    left: 233px;
+    top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 34 */
+.date1-secondary-signatory-management-cds-dlms {
+    position: relative;
+    left: 814px;
+    top: 463px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-secondary-signatory-management-cds-dlms {
+    position: relative;
+    left: 775px;
+    bottom: 112px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-secondary-signatory-management-cds-dlms {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 595px;
+}
+
+.name-secondary-signatory-management-cds-dlms {
+    position: relative;
+    left: 233px;
+    top: 24px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 35 */
+.date1-sleep-disorders {
+    position: relative;
+    left: 814px;
+    top: 436px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-sleep-disorders {
+    position: relative;
+    left: 775px;
+    bottom: 89px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-sleep-disorders {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 609px;
+}
+
+.name-sleep-disorders {
+    position: relative;
+    left: 233px;
+    top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 36 */
+.date1-smoking-cessation-mental-health {
+    position: relative;
+    left: 814px;
+    top: 437px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-smoking-cessation-mental-health {
+    position: relative;
+    left: 775px;
+    bottom: 113px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-smoking-cessation-mental-health {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 584px;
+}
+
+.name-smoking-cessation-mental-health {
+    position: relative;
+    left: 233px;
+    top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 37 */
+.date1-accountable-officer {
+    position: relative;
+    left: 814px;
+    top: 439px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-accountable-officer {
+    position: relative;
+    left: 775px;
+    bottom: 129px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-accountable-officer {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 565px;
+}
+
+.name-accountable-officer {
+    position: relative;
+    left: 233px;
+    top: -2px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Continue this pattern for each certificate */
+/* Certificate 38 */
+.date1-tto-dispensing-nurses {
+    position: relative;
+    left: 814px;
+    top: 430px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-tto-dispensing-nurses {
+    position: relative;
+    left: 775px;
+    bottom: 117px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-tto-dispensing-nurses {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 581px;
+}
+
+.name-tto-dispensing-nurses {
+    position: relative;
+    left: 233px;
+    top: -17px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 500;
+    font-size: 44pt;
+    text-align: right;
+    color: #f16722;
+}
+
+/* Certificate 21 */
+.date1-long-acting-antipsychotic {
+    position: relative;
+    left: 814px;
+    top: 471px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.date2-long-acting-antipsychotic {
+    position: relative;
+    left: 775px;
+    bottom: 111px;
+    font-family: "proxima-soft", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12pt;
+}
+
+.signature1-long-acting-antipsychotic {
+    position: absolute;
+    width: 130px;
+    height: auto;
+    left: 790px;
+    top: 585px;
+}
+
+.name-long-acting-antipsychotic {
+    position: relative;
+    left: 233px;
+    top: 33px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
     font-size: 44pt;
