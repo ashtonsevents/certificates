@@ -370,7 +370,7 @@ function downloadCertificate(certificateId) {
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateId]} ${certificateTemplate} .pdf`;
+    const filename = `${names[certificateId]} ${certificate} ${certificateTemplate} .pdf`;
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
