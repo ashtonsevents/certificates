@@ -352,11 +352,10 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-// Enable the download buttons and attach event listeners
     const downloadButtons = document.querySelectorAll('.downloadCertificate');
     downloadButtons.forEach((button, index) => {
-    button.addEventListener("click", () => downloadCertificate(`certificate_${index + 1}`)); // Pass the correct certificateId
-});
+        button.addEventListener("click", () => downloadCertificate(index));
+    });
 
     // Enable the download all certificates button
     document.getElementById("downloadAll").disabled = false;
@@ -374,7 +373,7 @@ function downloadCertificate(certificateId) {
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateId]} ${certificate} ${formattedDate}.pdf`;
+    const filename = `${names[certificateId]} ${certificate} ${formatDate}.pdf`;
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
