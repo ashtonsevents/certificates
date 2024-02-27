@@ -68,6 +68,10 @@ function generateCertificates() {
     const date = formatDate(rawDate); // Format date using custom function
     const names = document.getElementById("names").value.split(",").map(name => name.trim());
 
+    downloadButtons.forEach((button, index) => {
+        button.addEventListener("click", () => downloadCertificate(`certificate_${index + 1}`, names));
+    });
+
     const certificateContainer = document.getElementById("certificateContainer");
     certificateContainer.innerHTML = ""; // Clear previous certificates
 
@@ -361,24 +365,20 @@ function generateCertificates() {
     document.getElementById("downloadAll").disabled = false;
 }
 
-function downloadCertificate(certificateId) {
+function downloadCertificate(certificateId, names) {
     const certificate = document.getElementById(certificateId);
     const htmlContent = certificate.innerHTML;
 
     // Retrieve selected options and name input value
     const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
     const pharmacist = document.getElementById("pharmacist").value;
-    const names = document.getElementById("names").value.split(",").map(name => name.trim());
     console.log(names); // Log the names array to debug
 
     const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
-    // Get the index of the certificate being processed
-    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
-
     // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateIndex]}_${certificateTemplate}_${formattedDate}.pdf`;
+    const filename = `${names[certificateId]}_${certificateTemplate}_${formattedDate}.pdf`;
 
     const pdfOptions = {
         filename: filename, // Use the constructed filename
@@ -402,6 +402,7 @@ function downloadCertificate(certificateId) {
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
 }
+
 
 
 // Function to download all certificates as PDF
