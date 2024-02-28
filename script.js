@@ -356,46 +356,24 @@ function generateCertificates() {
 }
 
 function downloadCertificate(certificateId) {
+    const certificateId = `certificate_${certificateIndex + 1}`;
     const certificate = document.getElementById(certificateId);
     const htmlContent = certificate.innerHTML;
 
-    // Retrieve selected options and name input value
-    const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
-    const pharmacist = document.getElementById("pharmacist").value;
-    const names = document.getElementById("names").value.split(",").map(name => name.trim());
-    console.log(names); // Log the names array to debug
+    const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a4',
+        letterRendering: true // Preserve text alignment
+    });
 
-    const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
-    const formattedDate = formatDate(rawDate); // Format date using custom function
-
-     // Get the index of the certificate being processed
-    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
-
-    // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateIndex]} ${certificateTemplate} ${formattedDate}.pdf`;
-
-    const pdfOptions = {
-        filename: filename, // Use the constructed filename
-        pagebreak: { mode: 'avoid-all' },
-        html2canvas: { scale: 5 },
-        jsPDF: { 
-            orientation: 'landscape',
-            unit: 'mm',
-            format: 'a4',
-            letterRendering: true //preserve text alignment
-        } 
-    };
-
-    // Calculate the scale to fit content onto the A4 page
-    const contentWidth = certificate.offsetWidth;
-    const contentHeight = certificate.offsetHeight;
-    const scale = Math.min(297 / contentWidth, 210 / contentHeight);
-
-    // Set the scale option
-    pdfOptions.jsPDF.scale = scale;
-
-    // Generate and save the PDF
-    html2pdf().set(pdfOptions).from(htmlContent).save();
+    pdf.html(htmlContent, {
+        callback: function(pdf) {
+            pdf.save("certificate.pdf");
+        },
+        x: 10,
+        y: 10
+    });
 }
 
 
