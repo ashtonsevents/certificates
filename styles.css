@@ -156,7 +156,7 @@ img {
 
 .date2 {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 109px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -236,7 +236,7 @@ img.signature1 {
 /* Add styles for the name on Anaphylaxis certificate */
 .name-anaphylaxis {
     position: relative;
-    left: 233px;
+    right: 135px;
     top: -2px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
@@ -258,7 +258,7 @@ img.signature1 {
 /* Add styles for the date2 on Anaphylaxis certificate */
 .date2-anaphylaxis {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 128px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -288,7 +288,7 @@ img.signature1 {
 
 .date2-asthma {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 159px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -307,7 +307,7 @@ img.signature1 {
 
 .name-asthma {
     position: relative;
-    left: 233px;
+    right: 135px;
     top: -2px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
@@ -329,7 +329,7 @@ img.signature1 {
 
 .date2-attention {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 116px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -348,7 +348,7 @@ img.signature1 {
 
 .name-attention {
     position: relative;
-    left: 233px;
+    right: 135px;
     top: 27px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
@@ -370,7 +370,7 @@ img.signature1 {
 
 .date2-cannabis {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 139px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -389,7 +389,7 @@ img.signature1 {
 
 .name-cannabis {
     position: relative;
-    left: 233px;
+    right: 135px;
     top: -2px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
@@ -411,7 +411,7 @@ img.signature1 {
 
 .date2-clozapine {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 147px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -452,7 +452,7 @@ img.signature1 {
 
 .date2-controlled-drugs-destruction {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 133px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -493,7 +493,7 @@ img.signature1 {
 
 .date2-controlled-drugs-prisons {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 125px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -534,7 +534,7 @@ img.signature1 {
 
 .date2-controlled-drugs {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 159px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -574,7 +574,7 @@ img.signature1 {
 
 .date2-cyber-security {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 159px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -613,7 +613,7 @@ img.signature1 {
 
 .date2-diabetes-mental-health {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 129px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -653,7 +653,7 @@ img.signature1 {
 
 .date2-drug-interaction {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 159px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -693,7 +693,7 @@ img.signature1 {
 
 .date2-end-of-life-parkinsons {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 113px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -732,7 +732,7 @@ img.signature1 {
 
 .date2-epilepsy-mental-health {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 116px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -773,7 +773,7 @@ img.signature1 {
 
 .date2-gdpr {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 111px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -813,7 +813,7 @@ img.signature1 {
 
 .date2-good-distribution-practice {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 112px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -893,7 +893,7 @@ img.signature1 {
 
 .date2-high-dose-antipsychotic {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 113px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -933,7 +933,7 @@ img.signature1 {
 
 .date2-induction-to-ashtons {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 158px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -972,7 +972,7 @@ img.signature1 {
 
 .date2-introduction-to-medication {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 111px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1014,7 +1014,7 @@ img.signature1 {
 
 .date2-management-diabetes-end-of-life {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 112px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1053,7 +1053,7 @@ img.signature1 {
 
 .date2-managing-oral-problems-palliative-care {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 112px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1093,7 +1093,7 @@ img.signature1 {
 
 .date2-medicine-management {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 113px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1132,7 +1132,7 @@ img.signature1 {
 
 .date2-medicines-mental-health-act {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 114px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1172,7 +1172,7 @@ img.signature1 {
 
 .date2-patient-group-directions {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 159px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1211,7 +1211,7 @@ img.signature1 {
 
 .date2-pharmacist-recognition-award {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 124px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1251,7 +1251,7 @@ img.signature1 {
 
 .date2-pharmacological-interventions-detoxification {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 111px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1290,7 +1290,7 @@ img.signature1 {
 
 .date2-pharmacy-induction {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 158px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1330,7 +1330,7 @@ img.signature1 {
 
 .date2-rapid-tranquillisation {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 112px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1369,7 +1369,7 @@ img.signature1 {
 
 .date2-safer-medicines-administration {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 114px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1409,7 +1409,7 @@ img.signature1 {
 
 .date2-secondary-signatory-management-cds-dlms {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 112px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1448,7 +1448,7 @@ img.signature1 {
 
 .date2-sleep-disorders {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 89px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1488,7 +1488,7 @@ img.signature1 {
 
 .date2-smoking-cessation-mental-health {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 113px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1527,7 +1527,7 @@ img.signature1 {
 
 .date2-accountable-officer {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 129px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1567,7 +1567,7 @@ img.signature1 {
 
 .date2-tto-dispensing-nurses {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 117px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
@@ -1606,7 +1606,7 @@ img.signature1 {
 
 .date2-long-acting-antipsychotic {
     position: relative;
-    right: 135px;;
+    left: 775px;
     bottom: 111px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 200;
