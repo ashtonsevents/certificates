@@ -346,7 +346,7 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('downloadCertificate');
+    const downloadButtons = document.querySelectorAll('.downloadCertificate');
     downloadButtons.forEach((button, index) => {
         button.addEventListener("click", () => downloadCertificate(index));
     });
@@ -356,7 +356,7 @@ function generateCertificates() {
 }
 
 function downloadCertificate(certificateId) {
-    const certificate = document.getElementById(`certificate_${certificateId + 1}`);
+    const certificate = document.getElementById(certificateId);
     const htmlContent = certificate.innerHTML;
 
     // Retrieve selected options and name input value
