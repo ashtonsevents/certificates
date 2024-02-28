@@ -346,7 +346,7 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('downloadCertificate');
+    const downloadButtons = document.querySelectorAll('.downloadCertificate');
     downloadButtons.forEach((button, index) => {
         button.addEventListener("click", () => downloadCertificate(index));
     });
@@ -356,24 +356,46 @@ function generateCertificates() {
 }
 
 function downloadCertificate(certificateId) {
-    const certificateId = `certificate_${certificateIndex + 1}`;
-    const certificate = document.getElementById(certificateId);
+    const certificate = document.getElementById(`certificate_${certificateId + 1}`);
     const htmlContent = certificate.innerHTML;
 
-    const pdf = new jsPDF({
-        orientation: 'landscape',
-        unit: 'mm',
-        format: 'a4',
-        letterRendering: true // Preserve text alignment
-    });
+    // Retrieve selected options and name input value
+    const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
+    const pharmacist = document.getElementById("pharmacist").value;
+    const names = document.getElementById("names").value.split(",").map(name => name.trim());
+    console.log(names); // Log the names array to debug
 
-    pdf.html(htmlContent, {
-        callback: function(pdf) {
-            pdf.save("certificate.pdf");
-        },
-        x: 10,
-        y: 10
-    });
+    const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
+    const formattedDate = formatDate(rawDate); // Format date using custom function
+
+     // Get the index of the certificate being processed
+    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
+
+    // Construct filename based on selected options, input value, and formatted date
+    const filename = `${names[certificateIndex]} ${certificateTemplate} ${formattedDate}.pdf`;
+
+    const pdfOptions = {
+        filename: filename, // Use the constructed filename
+        pagebreak: { mode: 'avoid-all' },
+        html2canvas: { scale: 5 },
+        jsPDF: { 
+            orientation: 'landscape',
+            unit: 'mm',
+            format: 'a4',
+            letterRendering: true //preserve text alignment
+        } 
+    };
+
+    // Calculate the scale to fit content onto the A4 page
+    const contentWidth = certificate.offsetWidth;
+    const contentHeight = certificate.offsetHeight;
+    const scale = Math.min(297 / contentWidth, 210 / contentHeight);
+
+    // Set the scale option
+    pdfOptions.jsPDF.scale = scale;
+
+    // Generate and save the PDF
+    html2pdf().set(pdfOptions).from(htmlContent).save();
 }
 
 
