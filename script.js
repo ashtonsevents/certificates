@@ -393,6 +393,32 @@ function downloadCertificate(certificateId) {
 // Function to download all certificates as PDF
 document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
 function downloadAllCertificates() {
+
+    // Retrieve selected options and name input value
+    const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
+    const pharmacist = document.getElementById("pharmacist").value;
+    const names = document.getElementById("names").value.split(",").map(name => name.trim());
+
+    const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
+    const formattedDate = formatDate(rawDate); // Format date using custom function
+
+    // Get the index of the certificate being processed
+    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
+
+    // Construct filename based on selected options, input value, and formatted date
+    const filename = `${names[certificateIndex]} ${certificateTemplate} ${formattedDate}.pdf`;
+
+    const pdfOptions = {
+        filename: filename,
+        pagebreak: { mode: 'avoid-all' },
+        html2canvas: { scale: 5 },
+        jsPDF: { 
+            orientation: 'landscape',
+            unit: 'mm',
+            format: 'a4',
+            letterRendering: true // Preserve text alignment
+        } 
+    };
     // Generate and save the PDF
     html2pdf().from(document.getElementById("certificateContainer")).save();
 }
