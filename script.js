@@ -84,7 +84,7 @@ function generateCertificates() {
                     <div class="text-overlay">
                         <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
                         <p class="date1">${date}</p>
-                        <p class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
+                        <p style="text-align: right;"class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
                         <p class="date2">${date}</p>
                     </div>
                 </div>
