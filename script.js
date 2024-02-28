@@ -84,7 +84,7 @@ function generateCertificates() {
                     <div class="text-overlay">
                         <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
                         <p class="date1">${date}</p>
-                        <p style="text-align: right;" class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
+                        <p class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
                         <p class="date2">${date}</p>
                     </div>
                 </div>
@@ -346,7 +346,7 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('.downloadCertificate');
+    const downloadButtons = document.querySelectorAll('downloadCertificate');
     downloadButtons.forEach((button, index) => {
         button.addEventListener("click", () => downloadCertificate(index));
     });
@@ -363,62 +363,44 @@ function downloadCertificate(certificateId) {
     const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
     const pharmacist = document.getElementById("pharmacist").value;
     const names = document.getElementById("names").value.split(",").map(name => name.trim());
+    console.log(names); // Log the names array to debug
 
     const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
-    // Get the index of the certificate being processed
+     // Get the index of the certificate being processed
     const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
 
     // Construct filename based on selected options, input value, and formatted date
     const filename = `${names[certificateIndex]} ${certificateTemplate} ${formattedDate}.pdf`;
 
     const pdfOptions = {
-        filename: filename,
+        filename: filename, // Use the constructed filename
         pagebreak: { mode: 'avoid-all' },
         html2canvas: { scale: 5 },
         jsPDF: { 
             orientation: 'landscape',
             unit: 'mm',
             format: 'a4',
-            letterRendering: true // Preserve text alignment
         } 
     };
 
+    // Calculate the scale to fit content onto the A4 page
+    const contentWidth = certificate.offsetWidth;
+    const contentHeight = certificate.offsetHeight;
+    const scale = Math.min(297 / contentWidth, 210 / contentHeight);
+
+    // Set the scale option
+    pdfOptions.jsPDF.scale = scale;
+
     // Generate and save the PDF
-    html2pdf().from(document.getElementById("certificateContainer")).save();
+    html2pdf().set(pdfOptions).from(htmlContent).save();
 }
 
 
 // Function to download all certificates as PDF
 document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
 function downloadAllCertificates() {
-
-    // Retrieve selected options and name input value
-    const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
-    const pharmacist = document.getElementById("pharmacist").value;
-    const names = document.getElementById("names").value.split(",").map(name => name.trim());
-
-    const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
-    const formattedDate = formatDate(rawDate); // Format date using custom function
-
-    // Get the index of the certificate being processed
-    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
-
-    // Construct filename based on selected options, input value, and formatted date
-    const filename = `${names[certificateIndex]} ${certificateTemplate} ${formattedDate}.pdf`;
-
-    const pdfOptions = {
-        filename: filename,
-        pagebreak: { mode: 'avoid-all' },
-        html2canvas: { scale: 5 },
-        jsPDF: { 
-            orientation: 'landscape',
-            unit: 'mm',
-            format: 'a4',
-            letterRendering: true // Preserve text alignment
-        } 
-    };
     // Generate and save the PDF
     html2pdf().from(document.getElementById("certificateContainer")).save();
 }

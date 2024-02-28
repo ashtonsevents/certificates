@@ -65,12 +65,12 @@ button:hover {
     justify-content: space-between;
   }
   
-  /*
+  
   .name {
     position: absolute;
     bottom: 10px;
     left: 10px;
-  }*/
+  }
   
   .date {
     position: absolute;
@@ -233,10 +233,9 @@ img.signature1 {
 /* CERTIFICATE DETAILS */
 
 /* Add styles for the name on Anaphylaxis certificate */
-
 .name-anaphylaxis {
     position: relative;
-    left: 814px;
+    left: 233px;
     top: -2px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
@@ -552,6 +551,7 @@ img.signature1 {
 }
 
 .name-controlled-drugs {
+    position: relative;
     left: 233px;
     top: -2px;
     font-family: "proxima-soft", sans-serif;
@@ -1631,4 +1631,3 @@ img.signature1 {
     text-align: right;
     color: #f16722;
 }
-
