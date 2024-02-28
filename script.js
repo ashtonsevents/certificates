@@ -346,7 +346,7 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('.downloadCertificate');
+    const downloadButtons = document.querySelectorAll('downloadCertificate');
     downloadButtons.forEach((button, index) => {
         button.addEventListener("click", () => downloadCertificate(index));
     });
