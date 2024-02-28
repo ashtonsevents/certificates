@@ -84,7 +84,7 @@ function generateCertificates() {
                     <div class="text-overlay">
                         <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
                         <p class="date1">${date}</p>
-                        <p style="text-align: right;"class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
+                        <p class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
                         <p class="date2">${date}</p>
                     </div>
                 </div>
@@ -356,20 +356,19 @@ function generateCertificates() {
 }
 
 function downloadCertificate(certificateId) {
-    const certificate = document.getElementById(certificateId);
+    const certificate = document.getElementById(`certificate_${certificateId + 1}`); // Adjusted to get the certificate by index
     const htmlContent = certificate.innerHTML;
 
     // Retrieve selected options and name input value
     const certificateTemplate = document.getElementById("certificate").selectedOptions[0].text;
     const pharmacist = document.getElementById("pharmacist").value;
     const names = document.getElementById("names").value.split(",").map(name => name.trim());
-    console.log(names); // Log the names array to debug
 
     const rawDate = new Date(document.getElementById("date").value); // Convert input date to Date object
     const formattedDate = formatDate(rawDate); // Format date using custom function
 
-     // Get the index of the certificate being processed
-    const certificateIndex = parseInt(certificateId.split('_')[1]) - 1; // Extract index from certificateId
+    // Get the index of the certificate being processed
+    const certificateIndex = certificateId;
 
     // Construct filename based on selected options, input value, and formatted date
     const filename = `${names[certificateIndex]} ${certificateTemplate} ${formattedDate}.pdf`;
@@ -382,6 +381,7 @@ function downloadCertificate(certificateId) {
             orientation: 'landscape',
             unit: 'mm',
             format: 'a4',
+            
         } 
     };
 
@@ -398,9 +398,14 @@ function downloadCertificate(certificateId) {
 }
 
 
-// Function to download all certificates as PDF
-document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
-function downloadAllCertificates() {
+
+    // Function to download all certificates as PDF
+    document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
+    function downloadAllCertificates() {
+
+    // Verify the PDF generation process
+    console.log(pdfOptions); // Output the PDF options to verify settings
+
     // Generate and save the PDF
     html2pdf().from(document.getElementById("certificateContainer")).save();
 }
