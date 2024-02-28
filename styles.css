@@ -182,17 +182,17 @@ img.signature1 {
     font-size: 14pt;
 }
 
-/*
+
 .name {
     position: relative;
-    left: 233px;
+    right: 135px;;
     top: 94px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 500;
     font-size: 44pt;
     text-align: right;
     color: #f16722;
-}*/
+}
 
 /* Add styles for the certificate wrapper */
 .certificate-wrapper {
