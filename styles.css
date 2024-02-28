@@ -153,7 +153,7 @@ img {
     width: 297mm;
     height: auto;
 }
-
+/*
 .date2 {
     position: relative;
     left: 775px;
@@ -233,6 +233,7 @@ img.signature1 {
 /* CERTIFICATE DETAILS */
 
 /* Add styles for the name on Anaphylaxis certificate */
+
 .name-anaphylaxis {
     position: relative;
     left: 814px;
@@ -1631,3 +1632,4 @@ img.signature1 {
     text-align: right;
     color: #f16722;
 }
+
