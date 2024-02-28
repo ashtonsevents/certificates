@@ -386,7 +386,7 @@ function downloadCertificate(certificateId) {
     };
 
     // Generate and save the PDF
-    html2pdf().set(pdfOptions).from(htmlContent).save();
+    html2pdf().from(document.getElementById("certificateContainer")).save();
 }
 
 
