@@ -382,6 +382,7 @@ function downloadCertificate(certificateId) {
             orientation: 'landscape',
             unit: 'mm',
             format: 'a4',
+            letterRendering: true //preserve text alignment
         } 
     };
 
