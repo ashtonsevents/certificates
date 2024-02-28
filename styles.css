@@ -192,3 +192,42 @@ img.signature1 {
     text-align: right;
     color: #f16722;
 }
+
+/* Add styles for the certificate wrapper */
+.certificate-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Add styles for the download button */
+.certificate {
+    position: relative;
+}
+
+.downloadCertificate {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.downloadCertificate img {
+    width: 30px; /* Adjust as needed */
+    height: 24px; /* Adjust as needed */
+    left: 390px;
+    position: absolute;
+    top: 208px;
+}
+
+.downloadCertificate:hover img {
+    /* Add hover styles for the image */
+    /* For example, change image color */
+    filter: brightness(0.6); /* Adjust as needed */
+}
+
+/* CERTIFICATE DETAILS */
