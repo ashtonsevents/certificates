@@ -169,6 +169,13 @@ function generateCertificates() {
             certificateHTML = certificateHTML.replace('class="date2', 'class="date2-drug-interaction');
             certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-drug-interaction');
         }
+
+        if (certificateTemplate === 'certificate13') {
+            certificateHTML = certificateHTML.replace('class="name', 'class="name-eworks');
+            certificateHTML = certificateHTML.replace('class="date1', 'class="date1-eworks');
+            certificateHTML = certificateHTML.replace('class="date2', 'class="date2-eworks');
+            certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-eworks');
+        }
         
         
         if (certificateTemplate === 'certificate14') {
@@ -184,6 +191,7 @@ function generateCertificates() {
             certificateHTML = certificateHTML.replace('class="date2', 'class="date2-epilepsy-mental-health');
             certificateHTML = certificateHTML.replace('class="signature1', 'class="signature1-epilepsy-mental-health');
         }
+        
         
         if (certificateTemplate === 'certificate17') {
             certificateHTML = certificateHTML.replace('class="name', 'class="name-gdpr');
