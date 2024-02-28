@@ -84,7 +84,10 @@ function generateCertificates() {
                     <div class="text-overlay">
                         <img src="signatures/${signatureImage}" alt="Pharmacist Signature" class="signature1">
                         <p class="date1">${date}</p>
-                        <p style="text-align: right;" class="name ${certificateOption}">${name}</p> <!-- Add class based on the selected certificate -->
+                        <div class="text-container" style="position: relative; width: 100%;">
+                        <!-- Use position: absolute; and right: 0; to align the text to the right -->
+                            <p style="position: absolute; right: 0; margin: 0;">${name}</p>
+                        </div>
                         <p class="date2">${date}</p>
                     </div>
                 </div>
