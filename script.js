@@ -51,7 +51,9 @@ const pharmacistSignatures = {
     pharmacist49: 'Tomasz Wojcik.png',
     pharmacist50: 'Vikki Hartland.png',
     pharmacist51: 'Yogesh Patel.png',
-    pharmacist52: 'Zara Khan.png'
+    pharmacist52: 'Zara Khan.png',
+    pharmacist53: 'Jitendra Sheth.png',
+    pharmacist54: 'Aws Radef.png'
     
     
     // Add more signatures for other pharmacists as needed
