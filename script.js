@@ -358,10 +358,11 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('downloadCertificate');
+    const downloadButtons = document.querySelectorAll('.downloadCertificate'); // Corrected selector
     downloadButtons.forEach((button, index) => {
-        button.addEventListener("click", () => downloadCertificate(index));
+        button.addEventListener("click", () => downloadCertificate(`certificate_${index + 1}`)); // Pass certificateId as string
     });
+
 
     // Enable the download all certificates button
     document.getElementById("downloadAll").disabled = false;
@@ -425,7 +426,9 @@ function formatDate(date) {
     // Add suffix to day (e.g., "13th")
     const day = date.getDate();
     const suffix = getDaySuffix(day);
-    return formattedDate.replace(/\b(\d{1,2})(th|nd|rd|st)\b/, `$1${suffix}`);
+    const formattedDay = day + suffix;
+
+    return formattedDate.replace(/\b\d{1,2}\b/, formattedDay);
 }
 
 // Function to get day suffix (e.g., "st", "nd", "rd", "th")
