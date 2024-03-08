@@ -367,9 +367,6 @@ function generateCertificates() {
             button.hasListenerAttached = true;
         }
     });
-
-    // Enable the download all certificates button
-    document.getElementById("downloadAll").disabled = false;
 }
 
 function downloadCertificate(certificateId) {
@@ -412,14 +409,6 @@ function downloadCertificate(certificateId) {
 
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
-}
-
-
-// Function to download all certificates as PDF
-document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
-function downloadAllCertificates() {
-    // Generate and save the PDF
-    html2pdf().from(document.getElementById("certificateContainer")).save();
 }
 
 // Function to format date
