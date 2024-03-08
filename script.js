@@ -51,11 +51,7 @@ const pharmacistSignatures = {
     pharmacist49: 'Tomasz Wojcik.png',
     pharmacist50: 'Vikki Hartland.png',
     pharmacist51: 'Yogesh Patel.png',
-    pharmacist52: 'Zara Khan.png',
-    pharmacist53: 'Jitendra Sheth.png',
-    pharmacist54: 'Aws Radef.png',
-    pharmacist55: 'Nneka Ozouli.png',
-    pharmacist56: 'Roaa Mohammed.png'
+    pharmacist52: 'Zara Khan.png'
     
     
     // Add more signatures for other pharmacists as needed
@@ -358,15 +354,13 @@ function generateCertificates() {
     });
 
     // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('.downloadCertificate'); // Corrected selector
+    const downloadButtons = document.querySelectorAll('downloadCertificate');
     downloadButtons.forEach((button, index) => {
-        // Check if the event listener has already been attached
-        if (!button.hasListenerAttached) {
-            button.addEventListener("click", () => downloadCertificate(`certificate_${index + 1}`)); // Pass certificateId as string
-            // Mark the button to indicate that the listener has been attached
-            button.hasListenerAttached = true;
-        }
+        button.addEventListener("click", () => downloadCertificate(index));
     });
+
+    // Enable the download all certificates button
+    document.getElementById("downloadAll").disabled = false;
 }
 
 function downloadCertificate(certificateId) {
@@ -409,6 +403,14 @@ function downloadCertificate(certificateId) {
 
     // Generate and save the PDF
     html2pdf().set(pdfOptions).from(htmlContent).save();
+}
+
+
+// Function to download all certificates as PDF
+document.getElementById("downloadAll").addEventListener("click", downloadAllCertificates);
+function downloadAllCertificates() {
+    // Generate and save the PDF
+    html2pdf().from(document.getElementById("certificateContainer")).save();
 }
 
 // Function to format date
