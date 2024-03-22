@@ -358,17 +358,6 @@ function generateCertificates() {
     });
 
     
-    
-    // After generating certificates, enable the download buttons and attach event listeners
-    const downloadButtons = document.querySelectorAll('.downloadCertificate'); // Corrected selector
-    downloadButtons.forEach((button, index) => {
-        // Check if the event listener has already been attached
-        if (!button.hasListenerAttached) {
-            button.addEventListener("click", () => downloadCertificate(`certificate_${index + 1}`)); // Pass certificateId as string
-            // Mark the button to indicate that the listener has been attached
-            button.hasListenerAttached = true;
-        }
-    });
 }
 
 function downloadCertificate(certificateId) {
