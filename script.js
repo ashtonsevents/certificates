@@ -358,12 +358,6 @@ function generateCertificates() {
     });
 
     
-    // JavaScript code
-    document.getElementById("generateCertificate").addEventListener("click", function() {
-        this.classList.add("clicked");
-        // Other code for generating certificates
-    });
-
     
     // After generating certificates, enable the download buttons and attach event listeners
     const downloadButtons = document.querySelectorAll('.downloadCertificate'); // Corrected selector
