@@ -266,7 +266,6 @@ img.signature1 {
 /* Add styles for the date1 on Anaphylaxis certificate */
 .date1-anaphylaxis {
     position: relative;
-    left: 237px;
     top: 441px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
