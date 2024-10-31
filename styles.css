@@ -198,7 +198,6 @@ img.signature1 {
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
-    text-align: right;
 }
 
 
@@ -267,7 +266,7 @@ img.signature1 {
 /* Add styles for the date1 on Anaphylaxis certificate */
 .date1-anaphylaxis {
     position: relative;
-    left: 783px;
+    left: 237px;
     top: 441px;
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
@@ -304,7 +303,6 @@ img.signature1 {
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
-    text-align: right;
 }
 
 .date2-asthma {
@@ -346,7 +344,6 @@ img.signature1 {
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
-    text-align: right;
 }
 
 .date2-attention {
@@ -388,7 +385,6 @@ img.signature1 {
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
-    text-align: right;
 }
 
 .date2-cannabis {
@@ -430,7 +426,6 @@ img.signature1 {
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
-    text-align: right;
 }
 
 .date2-clozapine {
@@ -472,7 +467,6 @@ img.signature1 {
     font-family: "proxima-soft", sans-serif;
     font-weight: 600;
     font-size: 14pt;
-    
 }
 
 .date2-controlled-drugs-destruction {
