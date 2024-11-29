@@ -16,6 +16,7 @@ const pharmacistSignatures = {
     pharmacist14: 'Elizabeth Park.png',
     pharmacist15: 'Ellie long.png',
     pharmacist16: 'Gail Eccott.png',
+    pharmacist58: 'Gregg Simbwa.png',
     pharmacist17: 'Hawo Adan.png',
     pharmacist18: 'Ibrahim B.png',
     pharmacist19: 'Karen Higlett.png',
@@ -56,8 +57,9 @@ const pharmacistSignatures = {
     pharmacist54: 'Aws Radef.png',
     pharmacist55: 'Nneka Ozouli.png',
     pharmacist56: 'Roaa Mohammed.png',
-    pharmacist57: 'Svetlana Urum.png',
-    pharmacist58: 'LindaDang.png'
+    pharmacist57: 'Helen Lyon.png',
+    pharmacist58: 'Piotr Boguta.png',
+    pharmacist59: 'Linda Dang.png',
     
     
     // Add more signatures for other pharmacists as needed
